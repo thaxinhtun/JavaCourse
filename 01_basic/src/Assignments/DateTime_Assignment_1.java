@@ -15,11 +15,9 @@ public class DateTime_Assignment_1 {
 		
 		System.out.println(now.getDayOfWeek() +" , "+ now.format(dateFormat));
 		System.out.println("**********");
-
-		boolean status = true;
 		
-		for(String weekend :weekends) {
-			if(weekend == now.getDayOfWeek().toString()) {
+		for(String weekend : weekends) {
+			if(weekend.equalsIgnoreCase(now.getDayOfWeek().toString())) {
 				System.out.println("Today is my holiday!");
 				break;
 			}
