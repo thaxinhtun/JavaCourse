@@ -16,7 +16,7 @@ public class UserdefinedExceptionDemo{
 			throw new InvaildAgeException(age +"is not vaild to smoke");
 		else
 		{
-		System.out.println("Ypu can.");
+		System.out.println("You can.");
 		}
 	}
 		

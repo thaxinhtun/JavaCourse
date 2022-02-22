@@ -9,7 +9,7 @@ public class DateTime_Assignment_1 {
 	public static void main(String[] args) {
 		
 		String[] weekends = {"Saturday","Sunday"};
-		
+		boolean status = false;
 		LocalDate now = LocalDate.now();
 		DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("MMM dd yyyy");
 		
@@ -17,16 +17,15 @@ public class DateTime_Assignment_1 {
 		System.out.println("**********");
 		
 		for(String weekend : weekends) {
-			if(weekend.equalsIgnoreCase(now.getDayOfWeek().toString())) {
-				System.out.println("Today is my holiday!");
-				break;
-			}
-			else {
-				System.out.println("I have no time. I am studying Programming Language!");
-				break;
-			}
-		
+		if(weekend.equalsIgnoreCase(now.getDayOfWeek().toString())) {
+			System.out.println("Today is my holiday!");
+			status = true;
+			break;
+		}
 	}
-	}
+		if(status == false) {
+		System.out.println("I am busy.I'm studying programming language!");
+		}
+}
 }
 
