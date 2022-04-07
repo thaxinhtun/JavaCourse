@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lms.controller.returnBookController">
+   <children>
+      <Label layoutX="261.0" layoutY="25.0" text="Return Books">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_cardID" layoutX="149.0" layoutY="78.0" promptText="Enter Card no" />
+      <Button layoutX="345.0" layoutY="78.0" mnemonicParsing="false" onAction="#btn_search" prefHeight="25.0" prefWidth="77.0" text="Search" />
+      <ScrollPane layoutX="24.0" layoutY="125.0" prefHeight="259.0" prefWidth="669.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="tbl_data" layoutX="6.0" layoutY="6.0" prefHeight="250.0" prefWidth="661.0">
+                    <columns>
+                      <TableColumn fx:id="col_borrowID" prefWidth="75.0" text="BorrowID" />
+                      <TableColumn fx:id="col_name" prefWidth="99.0" text="Member ID" />
+                        <TableColumn fx:id="col_book" prefWidth="102.0" text="Book ID" />
+                        <TableColumn fx:id="col_BorrowDate" prefWidth="106.0" text="BorrowDate" />
+                        <TableColumn fx:id="col_dueDate" prefWidth="98.0" text="Due Date" />
+                        <TableColumn fx:id="col_returnDate" prefWidth="94.0" text="Return Date" />
+                        <TableColumn fx:id="col_fees" prefWidth="95.0" text="Fees" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <Button layoutX="269.0" layoutY="417.0" mnemonicParsing="false" onAction="#btn_return" prefHeight="31.0" prefWidth="112.0" text="Confrim Return" />
+      <Button layoutX="536.0" layoutY="477.0" mnemonicParsing="false" onAction="#btn_back" prefHeight="25.0" prefWidth="63.0" text="Back" />
+   </children>
+</AnchorPane>
